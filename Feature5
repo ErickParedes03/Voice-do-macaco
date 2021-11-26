@@ -1,0 +1,21 @@
+Feature: HU05 - Como usuario quiero que la aplicación me permita guardar mi contraseña y usuario para no escribirlo.
+
+Scenario: E01: Guardar mi contraseña y usuario
+TA01:
+    Given que tengo muchas contraseñas y todas son diferentes
+    When entre y le de clic en usuario quiero que me aparezca mi usuario, lo mismo con mi contraseña
+    Then solo darle clic en entrar
+
+    Examples:
+        | login | usuario | relleno automatico de mi usuario y contraseña |
+        | xi39  |   x39   |                     clic()                    |
+
+Scenario: E02: No me permite guardar mi contraseña y usuario
+TA02:
+    Given que tengo muchas contraseñas y todas son diferentes
+    When entré y le de clic en usuario no me mostrara mi usuario, lo mismo con mi contraseña
+    Then tendre que escribir mi usuario y contraseña
+
+    Examples:
+        | login | usuario |          escribir usuario y contraseña            |
+        | xi40  |   x40   | "login - usuario - escribir usuario y contraseña" |
