@@ -1,0 +1,20 @@
+Feature: HU14: Como especialista quiero seleccionar en horario para que mis pacientes pueden elegir el que más se le adecue.
+Scenario:E01: Selectividad de horario.
+TA01
+	Given que el especialista se encuentra en el formulario de horarios
+	When el especialista seleccione su horario disponeble
+	Then el sistema guardará la lista de horarios y mostrará la lista
+
+	Examples:
+	| Home | Horario | Insertar horario |
+	| xi55 |   x55   |     clic()    |
+
+Scenario:E02: No disponible la selectividad del horario.
+TA02
+	Given que el especialista se encuentra en el formulario de horarios
+	When el especialista no seleccione su horario disponible
+	Then el sistema no podrá guardar la lista de horarios mostrando un mensaje diciendo no se guardo horario
+
+	Examples:
+		| Home | Horario |  Insertar horario    |
+		| xi56 |   x56   | No se guardo horario |
