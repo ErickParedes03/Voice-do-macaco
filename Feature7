@@ -1,0 +1,20 @@
+Feature: HU07 - Como usuario quiero que la aplicación tenga varios tipos de ejercicios para practicar. 
+Scenario: E01: Ejercicios de diferentes niveles y enfoques
+TA01:
+    Given que busco lista de ejercicios
+    When entro al primer nivel de dificulta resuelvo ejercicios
+    Then iré progresando
+    
+    Examples:
+        | Lista Ejercicios | selecione nivel | Ver progreso|
+        |       xi43       |       x43       |    clic()   |
+
+Scenario: E02: Ejercicios simples y generales
+TA02:
+    Given que solo busco los ejercicios simples de la app
+    When realizo mis practicas solo tengo ejercicios simples
+    Then no voy a progresar y mi progreso sera bajo
+
+    Examples:
+        | Lista Ejercicios | nivel simple | Ver progreso|
+        |       xi44       |      x44     |    clic()   |
