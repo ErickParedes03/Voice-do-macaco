@@ -1,0 +1,23 @@
+Feature:  HU06: Como usuario quiero que la app este disponible para IOS y Android para no preocuparme por el SO.
+Scenario: E01: La app este disponible en cualquier SO (Sistema Operativo)
+TA01
+    Given que no todos tienen los mismos SO
+    When busques la app por play store(Android) o app store(IOS)
+    Then podrás descargártelo.
+
+    Examples:
+        |   Playstore    | Voice do macaco |    Descargar   |           
+        |      xi41      |       x41       |    clic()      |
+
+        | App Store | Voice do macaco | Descargar |
+        |    xi42   |       x42       |   clic()  |
+
+Scenario: La app no este disponible para iphone(IOS) 
+TA02
+    Given que si tienes un iphone 
+    When lo busques por la app store (IOS) no lo vas a encontrar
+    Then los usuarios con iphone no van a poder descargar la app te va a aparecer un mensaje de no encontrado
+
+    Examples:
+        |   App Store    | Voice do macaco |   Descargar      |           
+        |      xi43      |        x43      |  No encontrado   |
