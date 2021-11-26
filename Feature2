@@ -1,0 +1,20 @@
+Feature: HU02: Como especialista quiero que la app me permita crear mi cuenta como profesional para dar mis servicios.
+
+Scenario: E01: Crear mi cuenta como un especialista
+TA01:
+    Given que este en la parte de seleccionar cuenta (especialista o usuario)
+    When escoja especialista 
+    Then me podre logear como especialista
+    
+    Examples:
+        | escoger cuenta | seleccionar |                  cuenta especialista                  |
+        |      xi33      |      x33    | "escoger cuenta - seleccionar - cuenta especialista"  |
+
+Scenario: E02: No me deja crear mi cuenta como especialista
+TA02:
+    Given que este en el login
+    When me cree mi cuenta como usuario
+    Then no me podre diferenciar de los usuarios con disfemia
+    Examples:
+        |  login  | crear cuenta  |            cuenta usuario               |
+        |   xi34  |      x34      | "login - crear cuenta - cuenta usuario" |
