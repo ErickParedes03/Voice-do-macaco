@@ -1,0 +1,20 @@
+Feature: HU13: Como usuario quiero cancelar la cita programada, para que alguien más puede registrase a la cita.
+Scenario:E01: Puedo cancelar la cita
+TA01
+    Given que el usuario esta en el formario de citas
+    When el usuario quiera cancelar la cita
+    Then the sistema mostrará un mensaje ("quieres cancelar la cita") y dará 2 opciones("si" , "no")
+
+    Examples:
+        | Home | Citas | Cancelar cita |
+        | xi53 |  x53  |     clic()    | 
+
+Scenario:E02: No puedo cancelar la cita
+TA02
+    Given que el usuario esta en el formario de citas
+    When el usuario no quiera cancelar la cita
+    Then el sistema envia el link de la reunión.
+
+    Examples:
+        | Home | Citas | Confirmar cita |
+        | xi54 |  x54  |     clic()     |
