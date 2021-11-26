@@ -1,0 +1,20 @@
+Feature: HU10 - Como especialista quiero que la app me permita llevar a control con mis pacientes para asegurarme que estén mejorando.
+Scenario:E01: Puedo monitorear pacientes
+TA01:
+    Given  que tengo un sistema para monitorear el progreso de mis pacientes.
+    When  brinde terapia puedo tener al alcance cualquier anotación que realizara sobre el paciente.
+    Then  puedo apoyarlo de forma más eficiente.
+
+    Examples:
+        | Lista de pacientes | Seleccione paciente | Seleccione(Notas o Preferencias de ejercicios) |
+        |         xi47       |         x47         |                clic()                          |
+
+Scenario: E02: No le di a guardar información del paciente
+TA02:
+    Given que tengo un sistema para monitorear el progreso de mis pacientes
+    When después de la terapia no le dia a guardar información del paciente
+    Then no se guardara en el sistema y para la siguiente sesión no tendre los apuntes
+
+    Examples:
+        | Lista de pacientes | Seleccione paciente | Guardar información |
+        |         xi48       |         x48         |        clic()       |
