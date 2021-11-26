@@ -1,0 +1,20 @@
+Feature: HU15: Como usuario quiero que la aplicación detecte mis errores de tartamudez al hablar.
+Scenario: E01: La aplicación detecta el error
+TA01:
+    Given que le doy clic en corrección de pronunciación
+    When acabe de decir la palabra que me cuesta pronunciar.
+    Then la app lo detecta y lo reemplaza por una más fácil
+
+    Examples:
+        | Home | Pronunciación  | corrección |
+        | xi57 |      x57       |   clic()   |
+
+Scenario: E02: La aplicación no detecta el error
+TA02:
+    Given que le doy clic en corrección de pronunciación
+    When no pronuncie nada
+    Then la app no detecta nada y se envía un mensaje diciendo audio no encontrado .
+
+    Examples:
+        | Home | Pronunciación  |       corrección        |
+        | xi58 |      x58       |   Audio no encontrado   |
