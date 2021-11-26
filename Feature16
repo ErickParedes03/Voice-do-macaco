@@ -1,0 +1,20 @@
+Feature: HU16 - Como usuario, quiero reportar cuentas troll para no ser discriminado.  
+Scenario: E01: Reportar cuentas troll
+TA01:
+    Given que soy un usuario con tartamudez
+    When le de clic en reportar cuenta
+    Then cuando hable con alguien no me voy a sentir discriminado
+
+    Examples:
+        | Home | Reportar | Seleccionar cuenta |
+        | xi59 |    x59   |      clic()        |
+
+Scenario: E02: No deja reportar cuentas troll
+TA02:
+    Given que soy un usuario con tartamudez
+    When le de clic en reportar cuenta
+    Then le llegara un mensaje diciendo no puede reportar cuenta
+
+    Examples:
+        | Home |  Cuenta |         Reportar         |
+        | xi60 |   x60   | No puede reportar cuenta |
