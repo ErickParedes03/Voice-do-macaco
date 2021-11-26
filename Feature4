@@ -1,0 +1,22 @@
+Feature: HU04 - Como usuario quiero que la app me permita vincular mi cuenta de Google o Facebook
+
+Scenario: E01: Permitirme vincular mi cuenta con Google o Facebook
+TA01:
+    Given que tengo cuenta en google y Facebook
+    When este en la pantalla de login
+    Then podre escoger vincular cuenta con Google o Facebook
+
+    Examples:
+        | login |  cuenta | vincular con Google o Facebook | 
+        | xi37  |       x37       |          clic()        |
+
+
+Scenario: E02: No hay la opción de vincular mi cuenta con Google o Facebook
+TA02:
+    Given que tengo cuenta en google y Facebook
+    When este en la pantalla de login y no encuentre la opción de vincular cuenta
+    Then tendré que crearme una cuenta
+
+    Examples:
+        | login |  cuenta | Crear cuenta | 
+        | xi38  |   x38   |     clic()   |
