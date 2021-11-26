@@ -1,0 +1,20 @@
+Feature: HU11: Como especialista quiero que la aplicación me deje dejarle tareas a mis pacientes para asegurarme que estén practicando y para saber cuanto están mejorando							
+Scenario:E01: Permite dejar tareas
+TA01
+    Given que me encuentro en el formulario de tareas.
+    When seleccione la tarea para mi paciente.
+    Then el sistema lo registrará.
+
+    Examples:
+        | Home | Tareas | Dejar tarea |
+        | xi49 |   x49  |    clic()   |
+
+Scenario:E02: No permite dejar tareas
+TA02
+    Given que me encuentro en el formulario de tareas.
+    When no seleccione la tarea para mi paciente.
+    Then el sistema no registrará nada dejando un mensaje de no dejo tarea.
+
+    Examples:
+        | Home  | Tareas  |  Dejar tarea  |
+        | xi50  |   x50   | No dejo tarea |
