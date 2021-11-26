@@ -1,0 +1,21 @@
+Feature: HU03 - Como usuario quiero que la app me permita poner mi comentario para hacer que mejore la app
+
+Scenario: E01: Poner mi comentario
+TA01:
+    Given este en el home de la app
+    When este en comentarios y seleccione agregar comentarios
+    Then podre agregar mi comentario
+
+    Examples:
+        | Home | Comentario |    Agregar comentario   |
+        | xi35 |     x35    | "Me gusta mucho la app" |
+
+Scenario: E02: No me deja poner mi comentario
+TA02:
+    Given este en el home de la app
+    When este en comentarios y seleccione agregar comentarios
+    Then hay un mensaje que dice no disponible
+
+    Examples:
+        | Home | Comentario | Agregar comentario |
+        | xi36 |    x36     |    No disponible   |
