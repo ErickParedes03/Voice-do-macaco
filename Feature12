@@ -1,0 +1,20 @@
+Feature: HU12: Como usuario quiero ver los horarios disponibles de los profesionales, para saber si el especialista que me interesa está disponible.						
+Scenario:E01: Puedo ver horarios disponibles
+TA01
+    Given que ingreso al formulario de horarios
+    When seleccione un horario
+    Then el sistema registrá la hora.
+
+    Examples:
+        | Home | Horarios | Registrar hora|
+        | xi51 |    x51   |    clic()     |
+
+Scenario:E02: No permite ver horarios
+TA02
+    Given que ingreso al formulario de horarios
+    When no seleccione un horario
+    Then el sistema muestra un mensaje de no selecciono horario
+
+    Examples:
+        | Home | Horarios |      Registrar hora     |
+        | xi52 |    x52   |  No selecciono horario  |
