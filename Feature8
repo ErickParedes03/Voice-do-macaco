@@ -1,0 +1,19 @@
+Feature: HU08 - Como usuario quiero que la app tenga un recordar contraseña
+Scenario: E01: Permite recordar contraseña
+TA01:
+    Given que me olvido mi contraseña
+    When el usuario o especialista le den clic en recordar contraseña
+    Then les llegara un mensaje al correo con el que se loguea
+
+    Examples:
+        | login |  contraseña | recordar contraseña | 
+        |  xi43 |      x43    |        clic()       |
+
+Scenario: E02 No hay la opción de recordar contraseña
+TA02:
+    Given que me olvido mi contraseña
+    When el usuario o especialista no encuentren la opción de recordar contraseña
+    Then tendran que volverse a loguear
+    Examples:
+        | login |  contraseña | crear cuenta | 
+        |  xi44 |      x44    |    clic()    |
