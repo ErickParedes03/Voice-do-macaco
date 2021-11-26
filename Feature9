@@ -1,0 +1,20 @@
+Feature: HU9 - Como usuario quiero que la app me muestre la calificación de cada lingüista para facilitar mi decisión. 
+Scenario: E01: Muestra calificación de lingüistas
+TA01:
+    Given que veo las calificaciones de los especialistas se que opinan sobre ellos y facilita mi elección.
+    When entre al app para escoger un lingüista el saber que calificación tienen facilita mi elección.
+    Then me permite sentirme seguro sobre la elección realizada
+
+    Examples:
+        | Home | Linguista |            calificación           |
+        | xi45 |    x45    | "Home - Linguista - calificación" |
+
+Scenario: E02: No muestra calificación de lingüistas
+CA02:
+    Given que no puedo ver la calificación de los lingüistas y no tengo conocimiento de quienes sean
+    When entre al app para elegir un lingüista no estaré seguro de mi elección
+    Then dificulta mi elección de especialista
+
+    Examples:
+        | Home | Linguista |      calificación   |
+        | xi46 |    x46    | No hay calificación |
